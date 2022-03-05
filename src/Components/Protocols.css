@@ -1,0 +1,28 @@
+.flex {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+img {
+    width: 15vw;
+}
+
+.imgdetail {
+    width: 5vw;
+    height: 10vh;
+    margin-left: 10px;
+    margin-bottom: 20px;
+   
+}
+
+.protocol {
+    margin: 50px;
+}

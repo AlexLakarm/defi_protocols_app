@@ -1,23 +1,65 @@
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import {useState} from "react";
+import {useEffect} from "react";
+import Header from './Pages/Header';
+import HomePage from './Pages/HomePage';
+import ProtocolPage from './Pages/ProtocolPage';
+import { Route, Routes } from "react-router-dom";
 
 function App() {
+
+const [protocols, setProtocols] = useState([]);
+const [blockchains, setBlockchains] = useState([]);
+const [filter, setFilter] = useState("All");
+
+console.log(protocols);
+
+
+useEffect(()=>{
+  const getProtocols = async () => {
+
+    const url = 'https://api.llama.fi/protocols'; 
+    const {data} = await axios(url)
+  
+    setProtocols(data);
+
+    const uniqBlockchains = [];
+
+    data.forEach(protocol => {
+      protocol.chains.forEach(chain => {
+        uniqBlockchains.includes(chain) || uniqBlockchains.push(chain)
+      });
+    });
+
+    setBlockchains(uniqBlockchains);
+
+    
+  }
+
+  getProtocols();
+}, [])
+
+console.log(blockchains);
+
+const blockchainClick = (e)=> {
+  setFilter(e.target.textContent);
+  console.log(e.target.textContent);
+
+}
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <Routes>
+          
+            <Route path="/" element={<HomePage blockchainClick = {blockchainClick} protocols={protocols} filter = {filter}/>} />
+            <Route path="/:id" element={<ProtocolPage protocols={protocols}/>} />
+          
+      </Routes>   
     </div>
   );
 }
