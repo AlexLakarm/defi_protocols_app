@@ -12,17 +12,107 @@
 }
 
 img {
-    width: 15vw;
+    width: 25vw;
 }
 
 .imgdetail {
-    width: 5vw;
-    height: 10vh;
+    width: 30vw;
+    height: 12vh;
     margin-left: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
    
 }
 
 .protocol {
-    margin: 50px;
+    margin: 20px;
 }
+
+.details {
+    width: 80vw;
+    margin: 0 auto;
+    align :center;
+    font-size: 17px;
+}
+
+.blockchains {
+    width: 30vw;
+    margin: 0 auto;
+    align : center;
+    font-weight: 600;
+    font-size: 20px;
+    color: #430585;
+}
+
+
+.list {
+    margin: 0 auto;
+    align :left;
+}
+
+/*------media queries-------*/
+
+@media screen and (min-width : 321px) {
+
+    .imgdetail {
+        width: 23vw;
+        height: 12vh;
+        margin-left: 10px;
+        margin-bottom: 15px;
+       
+    }
+}
+
+@media screen and (min-width : 768px) {
+
+    .imgdetail {
+        width: 16vw;
+        height: 15vh;
+        margin-left: 10px;
+        margin-bottom: 15px;
+       
+    }
+    .protocol {
+        margin: 50px;
+    }
+    img {
+        width: 14vw;
+    }
+    
+}
+
+@media screen and (min-width : 1224px) {
+
+    .imgdetail {
+        width: 10vw;
+        height: 15vh;
+        margin-left: 10px;
+        margin-bottom: 15px;
+       
+    }
+    .protocol {
+        margin: 50px;
+    }
+    img {
+        width: 12vw;
+    }
+    
+}
+
+@media screen and (min-width : 1824px) {
+
+    .imgdetail {
+        width: 8vw;
+        height: 15vh;
+        margin-left: 10px;
+        margin-bottom: 15px;
+       
+    }
+    .protocol {
+        margin: 50px;
+    }
+    img {
+        width: 10vw;
+    }
+    
+}
+/*------media queries end-------*/

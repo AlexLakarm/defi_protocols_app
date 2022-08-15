@@ -2,17 +2,21 @@
          .btn-grad {background-image: linear-gradient(to right, #5f2c82 0%, #49a09d  51%, #5f2c82  100%)}
          .btn-grad {
             margin: 10px;
-            padding: 15px 45px;
+            padding: 8px 25px;
+            width:40vw;
             text-align: center;
             text-transform: uppercase;
             transition: 0.5s;
             background-size: 200% auto;
             color: white;     
-            font-size: 19px;
-            font-weight: 800;       
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
+            font-size: 15px;
+            text-decoration: none;    
+            box-shadow: 0 0 10px #eee;
+            border-radius: 12px;
             display: block;
+            font-family: 'Genos', sans-serif;
+            font-weight: 500;
+            border: 0px;
           }
 
           .btn-grad:hover {
@@ -24,3 +28,94 @@
 h2 {
     margin-bottom: 40px;
 }
+
+/*------media queries-------*/
+
+@media screen and (min-width : 321px) {
+
+  .btn-grad {
+    margin: 5px;
+    padding: 10px 25px;
+    width:40vw;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;     
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: 800;       
+    box-shadow: 0 0 20px #eee;
+    border-radius: 12px;
+    display: block;
+    font-family: 'Genos', sans-serif;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width : 768px) {
+
+  .btn-grad {
+    margin: 10px;
+    padding: 11px 45px;
+    width:30vw;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;     
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 800;       
+    box-shadow: 0 0 20px #eee;
+    border-radius: 12px;
+    display: block;
+    font-family: 'Genos', sans-serif;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width : 1224px) {
+
+  .btn-grad {
+    margin: 10px;
+    padding: 12px 45px;
+    width:12vw;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;     
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 800;       
+    box-shadow: 0 0 20px #eee;
+    border-radius: 12px;
+    display: block;
+    font-family: 'Genos', sans-serif;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width : 1824px) {
+
+  .btn-grad {
+    margin: 10px;
+    padding: 12px 45px;
+    width:10vw;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;     
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 800;       
+    box-shadow: 0 0 20px #eee;
+    border-radius: 12px;
+    display: block;
+    font-family: 'Genos', sans-serif;
+    font-weight: 500;
+  }
+}
+/*------media queries end-------*/
