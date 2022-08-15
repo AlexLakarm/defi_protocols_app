@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-family: 'Genos', sans-serif;
+  font-weight: 400;
 }
 
 .App-logo {
@@ -14,7 +16,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background: rgb(103,58,180);
+  background: radial-gradient(circle, rgba(103,58,180,1) 0%, rgba(0,0,0,1) 100%);
   min-height: 30vh;
   display: flex;
   flex-direction: column;
